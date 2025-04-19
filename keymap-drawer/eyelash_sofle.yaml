@@ -78,7 +78,7 @@ layers:
   - F8
   - F9
   - F10
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
   - $$mdi:mouse-left-click-outline$$
@@ -90,7 +90,7 @@ layers:
   - END
   - $$mdi:arrow-up-bold$$
   - HOME
-  - {t: \, s: '|'}
+  - {t: '-', s: _}
   - +
   - {t: '$$mdi:transfer$$', type: trans}
   - '~'
@@ -103,8 +103,8 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - '{'
+  - '}'
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB OFF
   - RGB ON
@@ -168,8 +168,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '{'
-  - '}'
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -260,3 +260,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [56, 51, 25]
+  k: KP EQUAL
+- p: [39, 56, 25]
+  k: KP EQUAL
