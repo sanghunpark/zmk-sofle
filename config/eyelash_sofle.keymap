@@ -43,9 +43,23 @@
             bindings = <&kp PLUS>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mod_morph_left_brace: mod_morph_left_brace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOD_MORPH_LEFT_BRACE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp LEFT_BRACKET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mod_morph_right_brace: mod_morph_right_brace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOD_MORPH_RIGHT_BRACE";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_BRACKET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
-
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -67,7 +81,7 @@
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10         &kp BACKSLASH
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS       &mod_morph_plus_eq
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE
+&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &mod_morph_left_brace  &mod_morph_right_brace
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12         &trans
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
