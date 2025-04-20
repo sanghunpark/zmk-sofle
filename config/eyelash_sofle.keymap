@@ -36,21 +36,16 @@
     };
 
     behaviors {
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        r-shift+plus {
-            bindings = <&kp KP_EQUAL>;
-            key-positions = <56 51 25>;
-        };
-
-        l-shit+plus {
-            bindings = <&kp KP_EQUAL>;
-            key-positions = <39 56 25>;
+        mod_morph_plus_eq: mod_morph_plus_eq {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOD_MORPH_PLUS_EQ";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp EQUAL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
+
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -71,7 +66,7 @@
         layer_1 {
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10         &kp BACKSLASH
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS       &kp PLUS
+&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS       &mod_morph_plus_eq
 &trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12         &trans
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
