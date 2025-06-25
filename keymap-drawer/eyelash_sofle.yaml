@@ -63,7 +63,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - '2'
-  - $$mdi:apple-keyboard-caps$$
+  - RIGHT GUI
   - $$mdi:backspace-reverse-outline$$
   layer1:
   - {t: '`', s: '~'}
